@@ -16,7 +16,6 @@ driver = Selenium::WebDriver.for :chrome
 
 # Login page
 driver.navigate.to 'https://preferences.salemwebnetwork.com/default.aspx?timeout=true'
-driver.manage.timeouts.implicit_wait=10
 driver.find_element(link_text: 'Create an account.').click
 
 # Create account
@@ -35,3 +34,5 @@ driver.find_element(class: 'more-interests').click
 driver.find_elements(class: 'interestCheckbox').each(&:click)
 driver.find_element(id: 'btnSubmit').click
 sleep 5
+
+puts "#{email_address} successfully signed up to be spammed"
