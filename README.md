@@ -1,5 +1,5 @@
-# Spam the Spammer
-A ruby script to spam email addresses that are spamming you. Just pass an email address in and they will be subscribed to dozens of mailing lists, some that send out multiple times daily.
+# Spam-the-Spammer
+A ruby script to spam email addresses that are spamming you. Just pass an email address in and they will be subscribed to dozens of mailing lists, some that go out multiple times daily.
 
 ## Install
 1. Clone repo
