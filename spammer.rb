@@ -19,8 +19,7 @@ driver.navigate.to 'https://preferences.salemwebnetwork.com/default.aspx?timeout
 driver.find_element(link_text: 'Create an account.').click
 
 # Create account
-uuid = SecureRandom.uuid.gsub('-', '_')
-user_name = email_address.split('@').first + uuid
+user_name = SecureRandom.uuid.gsub('-', '_')
 password = 'flood'
 
 driver.find_element(id: 'txtUsername').send_keys user_name
@@ -28,6 +27,7 @@ driver.find_element(id: 'txtPassword').send_keys password
 driver.find_element(id: 'txtPasswordConfirm').send_keys password
 driver.find_element(id: 'MainContent_txtEmail').send_keys email_address
 driver.find_element(id: 'btnSubmit').click
+sleep 2
 
 # Sign them up for all mailing lists
 driver.find_element(class: 'more-interests').click
